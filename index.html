@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Infinite Conference - Schedule</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/spinner.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/event-gen.js" defer></script>
+    <script src="/event-grammar.js" defer></script>
+    <script src="/proverbs.js" defer></script>
+    <script src="/session-gen.js" defer></script>
+    <script src="/page-logic.js" defer></script>
+    <script src="/dom-to-image.js" defer></script>
+  </head>  
+  <body>
+    
+    <div class="fake-page-content">
+      <div class="fake-header">
+        <div class="masthead">
+          Infinite<br>Conference
+        </div>
+        <div class="flex-grow"></div>
+        <div class="credits-holder">
+          <a href="https://twitter.com/aaronzbest" target="_blank" class="credits">Built by @aaronzbest.</a><br>
+          <a href="https://glitch.com/~infinite-conference" target="_blank" class="credits">Powered by Glitch.</a><br>
+          <a href="https://twitter.com/infconference" target="_blank" class="credits">Follow on Twitter.
+            <img src="https://cdn.glitch.com/7d05e925-19a0-4c3b-9fad-0430412c8ee2%2Ftwitter.png?1553789384542" width="16" height="16" class="twitter-bird">
+          </a>
+        </div>
+        
+      </div>
+      <div class="fake-header buttons-row">
+        <div class="fake-button">Home</div>
+        <div class="fake-button">About</div>
+        <div class="fake-button fake-selected">Schedule</div>
+        <div class="fake-button">Registration</div>
+      </div>
+      <div class="article">
+        <div id="meat-and-potatoes">
+          <div class="hidden-header">Infinite Conference</div>        
+          <h1 id="headline"></h1>
+          <div class="article-separator"> </div>
+          <div class="information" id="session-time"></div>
+          <div class="information" id="session-location"></div>
+          <div class="lds-dual-ring"><!-- loading spinner --></div>
+          <div class="hidden-promo">See more sessions at infinite-conference.glitch.me</div>
+        </div>
+        
+      </div>
+      <div class="next-wrapper">
+        <div class="share-button" tabindex="0" role="button">Share</div>
+
+        <div class="flex-grow"></div>
+        
+        <div class="next-button" tabindex="0" role="button">
+          Next event &rarr;
+        </div>
+      </div>
+    </div>
+    
+    <div class="scrim"></div>
+    
+    <div id="image-popup" role="dialog">
+      <div class="popup-topbar">
+        <div class="popup-close" tabindex="0" role="button">
+          X
+        </div>
+      </div>
+      <img id="image-holder" width="400px">
+      <div class="popup-instructions">
+        <b>right click + copy image</b> then paste on <a href="https://twitter.com/" target="_blank">twitter</a>,
+        <a href="https://www.facebook.com/" target="_blank">facebook</a>, etc, or <span id="img-save">click here to download.</span>
+      </div>
+    </div>
+
+
+  <!-- Tracking! Just wanna know who's visiting (✿◠‿◠) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137240487-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-137240487-1');
+  </script>
+
+    
+  </body>
+</html>
